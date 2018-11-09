@@ -52,14 +52,17 @@ contract tictactoe{
     	}
 	}
 
-	function current() constant returns(string, string) {
+	function current() constant returns(string, string, string) {
 	        string memory text = "No winner yet";
+		string memory STR = "Give Next Move";
         	uint winner = Status();
         	if(winner == 1){
             		text = "Winner is X";
+			STR = "Game OVER";
         	}
         	if (winner == 2){
             		text = "Winner is O";
+			STR = "Game OVER";
         	}
         
         
@@ -75,7 +78,7 @@ contract tictactoe{
             		bytes(out)[i + i/3] = signs[board[i]];
         	}
         
-        return (text, string(out));
+        return (text,STR, string(out));
     }
     
 
