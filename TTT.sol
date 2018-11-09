@@ -49,7 +49,7 @@ contract tictactoe{
 		for(uint i =0; i < 8;i++){
         		uint[] memory b = tests[i];
         		if(board[b[0]] != 0 && board[b[0]] == board[b[1]] && board[b[0]] == board[b[2]]) return board[b[0]];
-    		}
+    	}
 	}
 
 	function current() constant returns(string, string) {
@@ -80,3 +80,4 @@ contract tictactoe{
     
 
 }
+
